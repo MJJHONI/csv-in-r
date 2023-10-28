@@ -1,0 +1,75 @@
+ # insert The CSV and Excel Files part 1
+
+getwd() # Check the Working Directry 
+
+setwd("D:/DA/data set") # set the working Dir 
+
+sales_datad<- read.csv("sales_data.csv")  # insert the Data file 
+
+
+
+print(is.array(sales_datad)) # Check the type of Data
+
+print(ncol(sales_datad)) # Check the No of Column 
+
+print(nrow(sales_datad)) # Check the No of Rows
+
+View(sales_datad) # Viwe Data file 
+
+fix(sales_datad) # Viwe Data in sepret window this will editable so care full
+
+str(sales_datad) #check the data types and No of rows and Column .
+
+names(sales_datad) # check the column names  or headers names 
+
+nrow(sales_datad) # Check the No of Rows
+
+ncol(sales_datad)# Check the No of Column 
+
+length(sales_datad)  # Check the No of Column 
+
+dim(sales_datad) # Check the No of Row  and Column
+
+colnames(sales_datad)# check the column names  or headers names 
+
+summary(sales_datad)# check the column names  or headers names
+
+head(sales_datad) # view first 6 rows and full columns
+
+tail(sales_datad) # view last 6 rows and full columns
+
+salesd <- sales_datad[c(1:4)]#  select view columns
+
+salesdr <- sales_datad[c(1:4),]#  select view Rows
+
+salesdrcr <- sales_datad[c(4,1,5),(1:7)]#  filter Rows
+
+salesdrc <- sales_datad[c(4,1,5)]#  filter column but full row will display only 
+
+
+
+salesdrc <- sales_datad[c(1:4),(1:4)]#  select view Rows and Columns
+
+grep("price",colnames(sales_datad))  # Check name of  Index column
+names(sales_datad)
+
+fd <- sales_datad$price
+qt<-sales_datad$quantity
+
+totalprice <- sales_datad$price*sales_datad$quantity
+total_1_4<- totalprice[c(1:5)]
+
+id = sales_datad$customer_id
+list1 <- list(id[c(1:5)],totalprice[c(1:5)])
+
+print(list1 )
+
+
+print(paste(id[c(1:5)],totalprice[c(1:5)], sep = " - "))
+
+
+  
+
+
+
+
